@@ -1,0 +1,23 @@
+@charset "utf-8";
+.o-top-header-title{
+    display: inline-block;
+    padding: 15px 0;
+    line-height: 20px;
+    color: #8A909E;
+    font-size: 20px;
+}
+.o-top-header-title>small{
+    margin-left: 24px;
+}
+.content-header>h1{
+    font-size: 20px;
+}
+.content-header>.breadcrumb>li>a{
+    color: #AFB9C3;
+}
+.breadcrumb>.active{
+    color: #575C6E;
+}
+
+
+
