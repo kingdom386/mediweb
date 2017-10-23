@@ -1,4 +1,16 @@
 @charset "utf-8";
+.skin-blue .main-header .logo,.skin-blue .main-header .logo:hover{
+    background: #293238;
+}
+.skin-blue .main-header .navbar{
+    background: rgba(255, 255, 255, 1);
+}
+.skin-blue .main-header .navbar .sidebar-toggle{
+    color: #8A909E;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+    background: rgba(0, 0, 0, .4);
+}
 .o-top-header-title{
     display: inline-block;
     padding: 15px 0;

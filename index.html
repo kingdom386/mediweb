@@ -24,7 +24,8 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-  <header class="main-header">
+<!--顶部-->
+<header class="main-header">
     <a href="" class="logo">
       <span class="logo-lg"><b>MEDI-</b>LINK</span>
     </a>
@@ -32,81 +33,169 @@
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">视图切换</span>
       </a>
-      <span class="text-gray o-top-header-title">康医通医疗设备管理集团<small>v1.0.9</small></span>
+      <span class="o-top-header-title">康医通医疗设备管理集团<small>v1.0.9</small></span>
     </nav>
-  </header>
-  <!--main-header-->
-  <!--侧边导航栏-->
-  <aside class="main-sidebar">
+</header>
+<!--main-header-->
+<!--侧边导航栏-->
+<aside class="main-sidebar">
     <section class="sidebar">
-     <!--用户信息面板-->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="./assets/img/avatar.png" class="img-circle" alt="User Image">
-        </div>
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="./assets/img/avatar.png" class="img-circle" alt="用户头像">
+            </div>
         <div class="pull-left info">
-          <p>超级管理员</p>
-          <a href="#">用户科室</i></a>
+            <p>Alexander Pierce</p>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
-      </div>
-      <!--user-panel-->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">系统菜单</li>
-        <li>
-          <a href="#">
-            <i class="fa fa-desktop"></i>
-            <span>工作台</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
             </span>
-          </a>
-        </li>
-      </ul>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">系统菜单</li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-desktop"></i><span>工作台</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-wrench"></i><span>设备维修</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-phone"></i><span>设备报修</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="active treeview">
+                <a href=""><i class="fa fa-gavel"></i><span>采购管理</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href=""><i class="fa fa-circle-o"></i>年度采购计划</a></li>
+                    <li class="active"><a href=""><i class="fa fa-circle-o"></i>我的采购申请</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-random"></i><span>质量控制</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-book"></i><span>知识库</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-deaf"></i><span>物联感控</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-line-chart"></i><span>效益分析</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-gg"></i><span>资产管理</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-hourglass"></i><span>供应商</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-hospital-o"></i><span>医院管理</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href=""><i class="fa fa-gears"></i><span>系统管理</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+            </li>
+
+
+        </ul>
     </section>
-  </aside>
-  <!--main-sidebar-->
-    <!--主题内容-->
-  <div class="content-wrapper">
+<!-- /.sidebar -->
+</aside>
+<!--main-sidebar-->
+
+<!--主体内容-->
+<div class="content-wrapper">
     <section class="content-header">
-      <h1> 年度采购计划</h1>
-      <ol class="breadcrumb">
-        <li><a href="#"> 主页 </a></li>
-        <li><a href="">采购管理</a></li>
-        <li class="active"> 采购申请 </li>
-      </ol>
+        <h1> 工作台</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i>主页</a></li>
+            <li class="active">工作台</li>
+        </ol>
     </section>
-  </div>
-  <!--content-wrapper-->
-  <!--页面底部-->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
-    </div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header"><a href="" class="btn btn-success"><i class="fa fa-plus-square margin-r-5"></i><span>新增年度计划</span></a></div>
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Rendering engine</th>
+                                <th>Browser</th>
+                                <th>Platform(s)</th>
+                                <th>Engine version</th>
+                                <th>CSS grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Other browsers</td>
+                                <td>All others</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>U</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Rendering engine</th>
+                                <th>Browser</th>
+                                <th>Platform(s)</th>
+                                <th>Engine version</th>
+                                <th>CSS grade</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content -->
+</div>
+<!-- content-wrapper -->
+
+<!--页面底部-->
+<footer class="main-footer">
     <strong>&copy; 2017 <a href="">版权所有</a>.</strong> 苏ICP备16054240
-  </footer>
-  <!--main-footer-->
+</footer>
+<!--main-footer-->
 </div>
 <!-- wrapper -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/raphael.min.js"></script>
-<script src="assets/js/morris.min.js"></script>
-<script src="assets/js/jquery.sparkline.min.js"></script>
-<script src="assets/js/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="assets/js/jquery-jvectormap-world-mill-en.js"></script>
-<script src="assets/js/jquery.knob.min.js"></script>
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/daterangepicker.js"></script>
-<script src="assets/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/js/bootstrap3-wysihtml5.all.min.js"></script>
-<script src="assets/js/jquery.slimscroll.min.js"></script>
-<script src="assets/js/fastclick.js"></script>
-<script src="assets/js/adminlte.min.js"></script>
-<script src="assets/js/dashboard.js"></script>
-<script src="assets/js/demo.js"></script>
 </body>
 </html>
