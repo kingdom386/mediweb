@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-timepicker.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="assets/css/AdminLTE.min.css">
     <link rel="stylesheet" href="assets/css/_all-skins.min.css">
     <link rel="stylesheet" href="assets/css/myStyle.css" type="text/css"/>
@@ -135,8 +137,167 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box box-default">
-                        <div class="box-header">
-                           
+                        <div class="box-header o-apply-list-title-bg">
+                            <form action="" method="post" role="form" class="form-inline" id="form_list">
+                                <div class="form-group">
+                                    <label for="a_time">申请时间</label>
+                                    <input  id="a_time" type="text" class="form-control start_date" readonly placeholder="开始时间"/>
+                                    <label>至</label>
+                                    <input type="text" class="form-control end_date" readonly placeholder="结束时间"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_oid">申请单号</label>
+                                    <input type="text" id="a_oid" maxlength="25" placeholder="申请单号" class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_title">申请标题</label>
+                                    <input type="text" id="a_title" class="form-control" placeholder="申请标题"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="list_state">申请状态</label>
+                                    <select name="" id="list_state" class="form-control">
+                                        <option value="-1">状态</option>
+                                        <option value="1">不限</option>
+                                        <option value="2">已审批</option>
+                                        <option value="3">待采购</option>
+                                        <option value="3">已完成</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <a href="javascript:void(0);" class="btn btn-xs btn-success">查询</a>
+                                    <a href="javascript:void(0);" class="btn btn-xs btn-success btn-reset">重置</a>
+                                </div>
+                            </form>
+                        </div>
+                        <!--box-header-->
+                        <div class="box-body">
+                           <table class="table table-hover">
+                               <thead>
+                                   <tr>
+                                       <th> 状态 </th>
+                                       <th> 申请单号 </th>
+                                       <th> 采购设备 </th>
+                                       <th> 设备种类 </th>
+                                       <th> 部门 </th>
+                                       <th> 申请人 </th>
+                                       <th> 联系方式 </th>
+                                       <th> 申请时间 </th>
+                                       <th> 审核人 </th>
+                                       <th> 操作 </th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-circle text-yellow margin-r-5"></i>已审批</td>
+                                        <td>022145454422541</td>
+                                        <td>CT设备微型球管</td>
+                                        <td>十万元以下</td>
+                                        <td>放射科</td>
+                                        <td>Roger</td>
+                                        <td>18888888888</td>
+                                        <td>2017-10-14 10：25</td>
+                                        <td>David</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0);" class="btn btn-sm btn-success dropdown-toggle" id="#actio_dropdown1" data-toggle="dropdown" >操作 <span class="caret"></span></a>
+                                                <ul id="actio_dropdown1" class="dropdown-menu pull-right">
+                                                    <li role="presentation">
+                                                        <a role="menuitem" href="" class="text-aqua">详情</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a  role="menuitem" href="" class="text-blue">审批</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a role="menuitem" href="" class="text-maroon">执行</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-circle text-blue margin-r-5"></i>待采购</td>
+                                        <td>022145454422541</td>
+                                        <td>CT设备微型球管</td>
+                                        <td>十万元以下</td>
+                                        <td>放射科</td>
+                                        <td>Roger</td>
+                                        <td>18888888888</td>
+                                        <td>2017-10-14 10：25</td>
+                                        <td>David</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0);" class="btn btn-sm btn-success dropdown-toggle" id="#actio_dropdown2" data-toggle="dropdown" >操作 <span class="caret"></span></a>
+                                                <ul id="actio_dropdown2" class="dropdown-menu pull-right">
+                                                    <li role="presentation">
+                                                        <a role="menuitem" href="" class="text-aqua">详情</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a  role="menuitem" href="" class="text-blue">审批</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a role="menuitem" href="" class="text-maroon">执行</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-circle text-black margin-r-5"></i>待采购</td>
+                                        <td>022145454422541</td>
+                                        <td>CT设备微型球管</td>
+                                        <td>十万元以下</td>
+                                        <td>放射科</td>
+                                        <td>Roger</td>
+                                        <td>18888888888</td>
+                                        <td>2017-10-14 10：25</td>
+                                        <td>David</td>
+                                        <td>
+                                           <div class="dropdown">
+                                               <a href="javascript:void(0);" class="btn btn-sm btn-success dropdown-toggle" id="#actio_dropdown3" data-toggle="dropdown" >操作 <span class="caret"></span></a>
+                                               <ul id="actio_dropdown3" class="dropdown-menu pull-right">
+                                                   <li role="presentation">
+                                                       <a role="menuitem" href="" class="text-aqua">详情</a>
+                                                   </li>
+                                                   <li role="presentation">
+                                                       <a  role="menuitem" href="" class="text-blue">审批</a>
+                                                   </li>
+                                                   <li role="presentation">
+                                                       <a role="menuitem" href="" class="text-maroon">执行</a>
+                                                   </li>
+                                               </ul>
+                                           </div>
+                                        </td>
+                                    </tr>
+                               </tbody>
+                           </table>
+                        </div>
+                        <!--box-body-->
+                        <div class="box-footer">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <form action="" class="form-inline" role="form" method="post" >
+                                        <div class="form-group"><a href="javascript:void(0);"  class="disabled btn btn-sm btn-default margin-r-15 b_page"><i class="fa fa-caret-left"></i>上一页</a></div>
+                                        <div class="form-group">
+                                            <ul class="pagination pagination-sm">
+                                                <li class="disabled"><a href="javascript:void(0);">&lt;&lt;</a></li>
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);">2</a></li>
+                                                <li><a href="javascript:void(0);">3</a></li>
+                                                <li><a href="javascript:void(0);">4</a></li>
+                                                <li><a href="javascript:void(0);">5</a></li>
+                                                <li><a href="javascript:void(0);">&gt;&gt;</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-group"><a href="" class="btn btn-sm btn-default margin-l-15 b_page">下一页<i class="fa fa-caret-right"></i></a></div>
+                                        <div class="form-group">
+                                            <label>到</label>
+                                            <input type="text" class="form-control input-sm" placeholder="0" style="width: 38px;"/>
+                                            <label>页</label>
+                                            <button type="button" class="btn btn-sm btn-success">跳转</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,6 +317,8 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="assets/js/dataTables.bootstrap.min.js"></script>
 <script src="assets/js/jquery.slimscroll.min.js"></script>
 <script src="assets/js/fastclick.js"></script>
@@ -175,7 +338,7 @@
         }
     };
 
-    $(function () {
+    $(document).ready(function(){
         $('#example2').DataTable({
             'language': lan,
             'paging'      : true,
@@ -185,7 +348,17 @@
             'info'        : true,
             'autoWidth'   : false
         })
-    })
+
+        //重置表单内容
+        $('.btn-reset').on('click', function(){
+            $('#form_list')[0].reset();
+        });
+
+        //开始、结束时间
+        $(".start_date").datetimepicker({format: 'yyyy-mm-dd hh:ii', orientation:'bottom', language: "zh-CN", todayBtn: true, autoclose: true});
+        $(".end_date").datetimepicker({format: 'yyyy-mm-dd hh:ii', orientation:'bottom', language: "zh-CN", todayBtn: true, autoclose: true});
+
+    });
 </script>
 </body>
 </html>
