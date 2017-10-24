@@ -1,4 +1,7 @@
 @charset "utf-8";
+*{
+    font-family: 'simHei';
+}
 .skin-blue .main-header .logo,.skin-blue .main-header .logo:hover{
     background: #293238;
 }
@@ -22,7 +25,10 @@
     margin-left: 24px;
 }
 .content-header>h1{
+    font-family: 'Microsoft YaHei';
+    font-weight: 500;
     font-size: 20px;
+    color: #2B425B;
 }
 .content-header>.breadcrumb>li>a{
     color: #AFB9C3;
@@ -34,6 +40,33 @@
 .content-wrapper{
     min-height: 90%;
 }
+
+/*新增年度采购计划*/
+.box-header .box-title{
+    font-family: 'simHei';
+    font-size: 14px;
+    color: #2B425B;
+}
+
+label{
+    font-size: 13px;
+    color: #758697;
+    font-weight: 500;
+}
+
+.margin-r-15{
+    margin-right: 15px;
+}
+
+.box-bg{
+    background: #F3F4F6;
+}
+
+td span.active.active, .pagination>.active>a, .datetimepicker table tr td.active.active{
+    background: #00a65a !important;
+}
+
+
 
 
 
