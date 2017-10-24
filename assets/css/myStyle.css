@@ -1,4 +1,7 @@
 @charset "utf-8";
+*{
+    font-family: 'simHei';
+}
 .skin-blue .main-header .logo,.skin-blue .main-header .logo:hover{
     background: #293238;
 }
@@ -22,7 +25,10 @@
     margin-left: 24px;
 }
 .content-header>h1{
+    font-family: 'Microsoft YaHei';
+    font-weight: 500;
     font-size: 20px;
+    color: #2B425B;
 }
 .content-header>.breadcrumb>li>a{
     color: #AFB9C3;
@@ -35,5 +41,77 @@
     min-height: 90%;
 }
 
+/*新增年度采购计划*/
+.box-header .box-title{
+    font-family: 'simHei';
+    font-size: 14px;
+    color: #2B425B;
+}
+label{
+    font-size: 13px;
+    color: #758697;
+    font-weight: 500;
+}
+.margin-r-15{
+    margin-right: 15px;
+}
 
+.margin-l-5{
+    margin-left: 5px;
+}
 
+.margin-l-15{
+    margin-left: 15px;
+}
+
+.box-bg{
+    background: #F3F4F6;
+}
+
+td span.active.active, .pagination>.active>a, .datetimepicker table tr td.active.active{
+    background: #00a65a !important;
+}
+
+/*查看年度计划列表*/
+.o-apply-list-title-bg{
+    background: #f2f2f2;
+}
+
+.pagination{
+    margin:0;
+}
+
+.pagination>li>a,.b_page,.b_page>i{
+    color: #4A90E2;
+}
+
+a.b_page.disabled{
+    color: #757575;
+}
+
+a.b_page.disabled>i{
+    color: #ddd;
+}
+
+/*模态框样式覆盖*/
+.modal .modal-dialog,.modal.in .modal-dialog{
+    margin: 0 !important;
+    position: absolute;
+    z-index:55;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0) !important;
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+}
+
+.modal-header h5{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.modal-header h5>small{
+    color: #999;
+}
