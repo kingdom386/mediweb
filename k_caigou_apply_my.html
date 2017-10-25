@@ -421,12 +421,12 @@
             var machineType = $('input[name^="machine"]:checked').val();
 
             if(priceArea == 'true'){
-                if( machineType == 'charge' ){
-                    window.location.href = 'k_caigou_apply_myPOver.html';
-                } else if( machineType == 'scientific' ){
-                    window.location.href = '';
-                }
+                //请求后台
+                //TODO
+                window.location.href = 'k_caigou_apply_step1.html';
             }else{
+                //请求后台
+                //TODO
                 window.location.href = '';
             }
         });

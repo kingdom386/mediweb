@@ -2,21 +2,34 @@
 *{
     font-family: 'simHei';
 }
+
 i{
     font-style: normal;
 }
+
+.btn{
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -o-border-radius: 3px !important;
+    border-radius: 3px !important;
+}
+
 .skin-blue .main-header .logo,.skin-blue .main-header .logo:hover{
     background: #293238;
 }
+
 .skin-blue .main-header .navbar{
     background: rgba(255, 255, 255, 1);
 }
+
 .skin-blue .main-header .navbar .sidebar-toggle{
     color: #8A909E;
 }
+
 .skin-blue .main-header .navbar .sidebar-toggle:hover{
     background: #00a65a;
 }
+
 .o-top-header-title{
     display: inline-block;
     padding: 15px 0;
@@ -24,18 +37,22 @@ i{
     color: #8A909E;
     font-size: 20px;
 }
+
 .o-top-header-title>small{
     margin-left: 24px;
 }
+
 .content-header>h1{
     font-family: 'Microsoft YaHei';
     font-weight: 500;
     font-size: 20px;
     color: #2B425B;
 }
+
 .content-header>.breadcrumb>li>a{
     color: #AFB9C3;
 }
+
 .breadcrumb>.active{
     color: #575C6E;
 }
@@ -133,6 +150,20 @@ a.b_page.disabled>i{
     top: -12px;
 }
 
+.mt-element-step .step-line .mt-step-number>i{
+    font-size: 20px;
+    font-weight: 400;
+    top: 20px
+}
+
+.mt-element-step .step-line .done .mt-step-content,
+.mt-element-step .step-line .done .mt-step-title,
+.mt-element-step .step-line .active .mt-step-content,
+.mt-element-step .step-line .active .mt-step-title,
+.mt-element-step .step-line .mt-step-title {
+    font-size: 14px;
+}
+
 .add_shopper{
     border: 1px dashed #dedede;
 }
@@ -142,9 +173,53 @@ a.b_page.disabled>i{
     font-size: 14px;
 }
 
+textarea{
+    resize: none;
+}
 
+textarea.form-control{
+    height: 120px !important;
+}
 
+.msg-title, .msg-content{
+    color: #666;
+}
 
+.msg-title{
+    padding-left: 40px;
+    font-size: 14px;
+    line-height: 30px;
+}
 
+.msg-title>i:before{
+    font-size: 30px;
+    line-height: 30px;
+}
 
+.msg-content{
+    padding-left: 80px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.text-muted{
+    color: #758697 !important;
+}
+
+.text-999{
+    color: #999;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    background: #00a65a;
+    border-color: #008d4c;
+}
+
+.padding-lr-8{
+    padding: 0 8px;
+}
+
+.bg-f2{
+    background: #f2f2f2 !important;
+}
 
