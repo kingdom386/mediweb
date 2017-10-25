@@ -2,6 +2,9 @@
 *{
     font-family: 'simHei';
 }
+i{
+    font-style: normal;
+}
 .skin-blue .main-header .logo,.skin-blue .main-header .logo:hover{
     background: #293238;
 }
@@ -115,3 +118,33 @@ a.b_page.disabled>i{
 .modal-header h5>small{
     color: #999;
 }
+
+/*设备采购步骤*/
+.mt-element-step .step-line .mt-step-number{
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+.mt-element-step .step-line .mt-step-title:after, .mt-element-step .step-line .mt-step-title:before{
+    top: -12px;
+}
+
+.add_shopper{
+    border: 1px dashed #dedede;
+}
+
+.add_shopper>span{
+    color: #757575;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
