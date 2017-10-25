@@ -278,7 +278,7 @@
                            <a href="javascript:;">
                                <div class="col-xs-12">
                                    <div class="well bg-white add_shopper text-center">
-                                       <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加供货厂商名称</span>
+                                       <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加项目明细</span>
                                    </div>
                                </div>
                            </a>
@@ -300,12 +300,100 @@
                        </div>
                        <div class="row">
                            <div class="col-xs-6">
-                               <div class="well bg-white add_shopper text-center">
-                                   <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加供货厂商名称</span>
-                               </div>
+                               <a href="javascript:;">
+                                   <div class="well bg-white add_shopper text-center">
+                                       <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加常规项目名称</span>
+                                   </div>
+                               </a>
                            </div>
                        </div>
                    </div>
+                   <!--box-body-->
+                   <div class="box-header no-padding">
+                       <h3 class="box-title text-muted"> 预提高科室诊疗水平</h3>
+                   </div>
+                   <!--box-header-->
+                   <div class="box-body">
+                       <div class="row">
+                           <div class="col-xs-3">
+                               <div class="form-group">
+                                   <label> 预开展项目名称 </label>
+                                   <input type="text" class="form-control" placeholder="收费项目名称"/>
+                               </div>
+                               <!--form-group-->
+                           </div>
+                           <div class="col-xs-3">
+                               <div class="form-group">
+                                   <label> 预开展时间 </label>
+                                   <input type="text" class="form-control" placeholder="收费项目编码"/>
+                               </div>
+                               <!--form-group-->
+                           </div>
+                           <div class="col-xs-3">
+                               <div class="form-group bg-f2 padding-lr-8" style="padding-bottom: 15px;">
+                                   <label> 利用该设备时候开展新项目 </label>
+                                   <div>
+                                       <label class="radio-inline">
+                                           <input type="radio" name="z" class="minimal" />
+                                           <span>开展</span>
+                                       </label>
+                                       <label class="radio-inline">
+                                           <input type="radio" name="z" class="minimal"/>
+                                           <span>常规</span>
+                                       </label>
+                                   </div>
+                               </div>
+                               <!--form-group-->
+                           </div>
+                           <div class="col-xs-3">
+                               <div class="form-group bg-f2 padding-lr-8" style="padding-bottom: 15px;">
+                                   <label> 开展新项目的领先水平 </label>
+                                   <div>
+                                       <label class="radio-inline">
+                                           <input type="radio" name="z" class="minimal" />
+                                           <span>省内领先</span>
+                                       </label>
+                                       <label class="radio-inline">
+                                           <input type="radio" name="z" class="minimal"/>
+                                           <span>国内领先</span>
+                                       </label>
+                                       <label class="radio-inline">
+                                           <input type="radio" name="z" class="minimal"/>
+                                           <span>院内新技术</span>
+                                       </label>
+                                   </div>
+                               </div>
+                               <!--form-group-->
+                           </div>
+                       </div>
+                       <!--row-->
+                       <div class="row">
+                           <div class="col-xs-6">
+                               <div class="form-group">
+                                   <label>预提高科室诊疗水平项目</label>
+                                   <small class="text-999 text-danger pull-right">(与购置的设备有关)</small>
+                                   <input type="text" class="form-control">
+                               </div>
+                           </div>
+                           <div class="col-xs-6">
+                               <div class="form-group">
+                                   <label>预期达到的水平</label>
+                                   <input type="text" class="form-control">
+                               </div>
+                           </div>
+                       </div>
+                       <!--row-->
+                       <div class="row">
+                           <div class="col-xs-12">
+                               <a href="javascript:;">
+                                   <div class="well bg-white add_shopper text-center">
+                                       <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加常规项目名称</span>
+                                   </div>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+                   <!--box-body-->
 
                </div>
            </div>
@@ -318,7 +406,7 @@
 </form>
 <div class="well bg-white no-padding">
     <p class="text-center"><i class="text-danger">注:</i>请确认以上信息是否填写完整</p>
-    <p class="text-center"><a href="javascript:;" class="btn btn-sm btn-success btn-frm-prev margin-r-15 ">上一项</a><a href="javascript:;" class="btn btn-sm btn-success btn-frm-next">下一项</a></p>
+    <p class="text-center"><a href="javascript:;" class="btn btn-sm btn-success btn-frm-prev margin-r-15 ">上一项</a></p>
 </div>
 </div>
 <!--box-body-->
@@ -326,6 +414,7 @@
     <div class="row">
         <div class="col-xs-12">
             <a href="javascript:void(0);" class="btn btn-sm btn-default pull-right btn-leave-page">返回</a>
+            <a href="javascript:;" class="btn btn-sm btn-success pull-right margin-r-5">保存</a>
         </div>
     </div>
 </div>
