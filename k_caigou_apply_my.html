@@ -425,11 +425,13 @@
                 //TODO
                 if(machineType == 'charge'){
                     window.location.href = 'k_caigou_apply_step1.html';
-                }else{
-                    window.location.href = '';
+                } else if(machineType == 'scientific'){
+                    window.location.href = 'k_caigou_apply_k_step1.html';
+                } else {
+                    //TODO
                 }
 
-            }else{
+            } else {
                 //请求后台
                 //TODO
                 window.location.href = '';

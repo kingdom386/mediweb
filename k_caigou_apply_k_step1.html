@@ -145,20 +145,20 @@
                     <div class="box-header">
                         <div class="mt-element-step">
                             <div class="row step-line">
-                               <div class="col-xs-8 col-xs-offset-2">
-                                   <div class="col-md-4 mt-step-col no-padding first active">
-                                       <div class="mt-step-number bg-white">1</div>
-                                       <div class="mt-step-title font-grey-cascade">基础信息</div>
-                                   </div>
-                                   <div class="col-md-4 mt-step-col no-padding">
-                                       <div class="mt-step-number bg-white">2</div>
-                                       <div class="mt-step-title font-grey-cascade">设备信息</div>
-                                   </div>
-                                   <div class="col-md-4 mt-step-col no-padding last">
-                                       <div class="mt-step-number bg-white">3</div>
-                                       <div class="mt-step-title font-grey-cascade">使用信息</div>
-                                   </div>
-                               </div>
+                                <div class="col-xs-8 col-xs-offset-2">
+                                    <div class="col-md-4 mt-step-col no-padding first active">
+                                        <div class="mt-step-number bg-white">1</div>
+                                        <div class="mt-step-title font-grey-cascade">基础信息</div>
+                                    </div>
+                                    <div class="col-md-4 mt-step-col no-padding">
+                                        <div class="mt-step-number bg-white">2</div>
+                                        <div class="mt-step-title font-grey-cascade">设备信息</div>
+                                    </div>
+                                    <div class="col-md-4 mt-step-col no-padding last">
+                                        <div class="mt-step-number bg-white">3</div>
+                                        <div class="mt-step-title font-grey-cascade">使用信息</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                                             </div>
                                             <!-- form-group -->
                                             <div class="form-group">
-                                                <label> 添加时间 </label>
+                                                <label> 申请时间 </label>
                                                 <input type="text" name="dateTimes" readonly class="form-control addTime" placeholder="添加时间"/>
                                             </div>
                                             <!-- form-group -->
@@ -231,7 +231,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>仪器设备名称<i class="text-danger">*</i> </label>
-                                                <input type="text" name="plneName" class="form-control" placeholder="计划名称"/>
+                                                <input type="text" name="plneName" class="form-control" placeholder="设备名称"/>
                                             </div>
                                             <!-- form-group -->
                                         </div>
@@ -256,8 +256,8 @@
                                                 <textarea name="" id="others" cols="10" rows="10" class="form-control"></textarea>
                                             </div>
                                             <div class="well bg-white no-padding">
-                                                <p class="text-center"><i class="text-danger">注:</i>请确认以上信息是否填写完整</p>
-                                                <p class="text-center"><a href="" class="btn btn-sm btn-success btn-frm-next">下一项</a></p>
+                                                <p class="text-center"><i class="text-danger">注:</i><span class="text-999">请确认以上星号填写完整</span></p>
+                                                <p class="text-center"><a href="javascript:;" class="btn btn-sm btn-success btn-frm-next">下一项</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -345,8 +345,9 @@
         //TODO
         //表达跳转下一页
         $(".btn-frm-next").on('click', function(){
+
             //TODO
-            window.location.href = 'k_caigou_apply_step2.html';
+            window.location.href = 'k_caigou_apply_k_step2.html';
         });
 
         //用户离开页面出发
