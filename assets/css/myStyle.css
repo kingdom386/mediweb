@@ -240,17 +240,17 @@ textarea.form-control{
     color: #666;
 }
 
-.page-counter{
+.page-group .page-counter{
     line-height: 28px;
-    display: block;
     width: 28px;
     color: #fff;
+    background: #ddd;
     -webkit-border-radius: 100% !important;
     -moz-border-radius: 100% !important;
     border-radius: 100% !important;
 }
 
-.active .page-counter{
+.page-group.active .page-counter{
     background: #00c0ef !important;
     border-color: #00acd6 !important;
 }
