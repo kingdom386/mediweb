@@ -285,7 +285,14 @@ textarea.form-control{
     /*border-color:#46b8da !important;*/
 /*}*/
 
+/*十万元以上设备详情*/
+.tabs{
+    display: none;
+}
 
+.tabs.active{
+    display: block;
+}
 
 
 
