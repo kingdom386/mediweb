@@ -309,9 +309,11 @@
                                 </div>
                             </div>
                             <!--row-->
+                            <div class="my-cg"></div>
+
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="javascript:;">
+                                    <a href="javascript:;" class="add_cg">
                                         <div class="well bg-white add_shopper text-center">
                                             <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加常规项目名称</span>
                                         </div>
@@ -386,6 +388,7 @@
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/adminlte.min.js"></script>
 <script type="text/javascript">
+    var counter = 0;
     $(document).ready(function(){
         //重置表单内容
         $('.btn-reset').on('click', function(){
@@ -407,7 +410,34 @@
             //TODO
         });
 
+        //添加常规项目
+        $('.add_cg').on('click', function(){
+            ++counter;
+            if(counter <= 5){
+                var cg_node = '<div class="cg-wrapper"> <div class="row  margin-bottom-5">'+
+                        '<div class="col-xs-6">'+
+                        '<div class="form-group no-margin">'+
+                        '<label> 科研类型 </label>'+
+                        '<select name="" id="" class="form-control">' +
+                        '<option value="-1">科研类型</option><option value="1">预申请省级科研项目</option><option value="2">预申请校级科研项目</option><option value="3">预发表SCI文章</option><option value="4">预发表核心A文章</option><option value="5">预发表核心文章</option><option value="6">预申请专利</option>'+
+                        '</select>'+
+                        '</div></div><div class="col-xs-3"><div class="form-group no-margin"><label>实现年限</label>'+
+                        '<input type="text" class="form-control"/></div>'+
+                        '</div><div class="col-xs-3"><div class="form-group no-margin"><label>数量</label>'+
+                        '<input type="text" class="form-control"/></div></div></div>' +
+                        '<div class="row margin-bottom-5"><div class="col-xs-1 col-xs-offset-11"><a href="javascript:;" class="btn btn-default pull-right" onclick="delItem(this)">删除</a></div></div> </div>';
+                $('.my-cg').append(cg_node);
+            } else {
+                counter = 5;
+            }
+
+        });
     });
+
+    function delItem(it){
+        --counter;
+        $(it).parents('.cg-wrapper').remove();
+    }
 </script>
 </body>
 </html>

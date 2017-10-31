@@ -219,6 +219,9 @@
                                                 <small class="pull-right text-muted">(如方便请备注联系方式)</small>
                                                 <input type="text" name="" value="" class="form-control" placeholder="供货厂商名称"/>
                                             </div>
+                                            <div class="my-wrapper">
+
+                                            </div>
                                             <div class="form-group">
                                                 <a href="javascript:void(0);" class="add_shopper_name">
                                                     <div class="well bg-white add_shopper text-center">
@@ -328,6 +331,7 @@
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/adminlte.min.js"></script>
 <script type="text/javascript">
+    var counter = 0;
     $(document).ready(function(){
         //重置表单内容
         $('.btn-reset').on('click', function(){
@@ -338,14 +342,22 @@
 
         //添加供应厂商名称
         $('.add_shopper_name').on('click', function(){
-            console.log('添加供应厂商名称');
+            ++counter;
+            if(counter <= 5){
+                var nodeStr = '<div class="form-group"><div class="row">' +
+                        '<div class="col-xs-11"><input type="text" name="" value="" class="form-control col-xs-10" placeholder="供货厂商名称"/></div>' +
+                        '<div class="col-xs-1 no-padding"><a href="javascript:;" class="btn btn-default" onclick="delItem(this)" >删除</a>' +
+                        '</div></div></div>';
+                $('.my-wrapper').append(nodeStr);
+            } else {
+                counter = 5;
+            }
         });
 
         //获取表单数据
         //TODO
         //表达跳转下一页
         $(".btn-frm-next").on('click', function(){
-
             //TODO
             window.location.href = 'k_caigou_apply_k_step2.html';
         });
@@ -357,6 +369,11 @@
 
         });
     });
+
+    function delItem(it){
+        --counter;
+        $(it).parents('.form-group').remove();
+    }
 </script>
 </body>
 </html>
