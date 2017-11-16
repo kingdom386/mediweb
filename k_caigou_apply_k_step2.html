@@ -427,7 +427,7 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
-                    <a href="javascript:void(0);" class="add_shopper_name">
+                    <a href="javascript:void(0);" class="add_shopper_name" data-id="7">
                         <div class="well bg-white add_shopper text-center">
                             <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加供货厂商名称</span>
                         </div>
@@ -479,8 +479,8 @@
 <script src="assets/js/icheck.min.js"></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/adminlte.min.js"></script>
+<script src="assets/js/public.js"></script>
 <script type="text/javascript">
-    var counter = 0;
     $(document).ready(function(){
         //重置表单内容
         $('.btn-reset').on('click', function(){
@@ -503,25 +503,15 @@
         });
         //添加供应厂商名称
         $('.add_shopper_name').on('click', function(){
-            ++counter;
-            if(counter <= 5){
-                var nodeStr = '<div class="my-gy"><div class="row mwp">' +
-                        '<div class="col-md-3"><div class="form-group"><label class="sr-only"> 设备名称 </label><input type="text" name=""  class="form-control" placeholder="设备名称"/></div></div>' +
-                        '<div class="col-md-3"><div class="form-group"><label class="sr-only"> 购置时间 </label><input type="text" name="p_time" readonly class="form-control purchase_time" placeholder="购置时间"/></div></div>' +
-                        '<div class="col-xs-1"><a href="javascript:;" class="btn btn-default">删除</a></div>'+
-                        '</div></div>';
-                $('.my-wrapper').append(nodeStr);
-            } else {
-                counter = 5;
-            }
+            var step7_node ='<div class="pubDel"><div class="row mwp">' +
+                    '<div class="col-md-3"><div class="form-group"><label class="sr-only"> 设备名称 </label><input type="text" name=""  class="form-control" placeholder="设备名称"/></div></div>' +
+                    '<div class="col-md-3"><div class="form-group"><label class="sr-only"> 购置时间 </label><input type="text" name="p_time" readonly class="form-control purchase_time" placeholder="购置时间"/></div></div>' +
+                    '<div class="col-xs-1"><a href="javascript:;" class="btn btn-default delete-btn">删除</a></div>'+
+                    '</div></div>';
+            pubOp($('.my-wrapper'), step7_node, 5);
         });
 
     });
-
-    function delItem(it){
-        --counter;
-        $(it).parents('.my-gy').remove();
-    }
 </script>
 </body>
 </html>

@@ -280,7 +280,7 @@
                        </div>
                        <!--my-mx-->
                        <div class="row">
-                           <a href="javascript:;" class="add_my_mx">
+                           <a href="javascript:;" class="add_my_mx" data-id="3">
                                <div class="col-xs-12">
                                    <div class="well bg-white add_shopper text-center">
                                        <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加项目明细 <small class="text-danger">（最多添加5条记录）</small></span>
@@ -309,7 +309,7 @@
                        <!--my-proj-->
                        <div class="row">
                            <div class="col-xs-6">
-                               <a href="javascript:;" class="add_proj">
+                               <a href="javascript:;" class="add_proj" data-id="4">
                                    <div class="well bg-white add_shopper text-center">
                                        <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加常规项目名称 <small class="text-danger">（最多添加5条记录）</small></span>
                                    </div>
@@ -398,7 +398,7 @@
                        <!--my-proj_ks-->
                        <div class="row">
                            <div class="col-xs-12">
-                               <a href="javascript:;" class="add_proj_ks">
+                               <a href="javascript:;" class="add_proj_ks" data-id="5">
                                    <div class="well bg-white add_shopper text-center">
                                        <i class="fa fa-plus text-gray"></i><span class="margin-l-15">添加常规项目名称</span>
                                    </div>
@@ -474,6 +474,7 @@
 <script src="assets/js/icheck.min.js"></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/adminlte.min.js"></script>
+<script src="assets/js/public.js"></script>
 <script type="text/javascript">
     var counter1 = counter2 = counter3 = 0;
     $(document).ready(function(){
@@ -498,53 +499,40 @@
         });
 
         $('.add_my_mx').on('click', function(ev){
-            ++counter1;
-            if(counter1 <= 5){
-                var mx_node = '<div class="add_content">' +
-                        '<div class="row">' +
-                        '<div class="col-xs-3"><div class="form-group"><label class="sr-only"> 收费项目名称 </label><input type="text" class="form-control" placeholder="收费项目名称"/></div></div>'+
-                        '<div class="col-xs-3"><div class="form-group"><label class="sr-only"> 收费项目编码 </label><input type="text" class="form-control" placeholder="收费项目编码"/></div></div>'+
-                        '<div class="col-xs-3"><div class="form-group"><label class="sr-only"> 费用/次(元) </label><input type="text" class="form-control" placeholder="费用/次(元)"/></div></div>' +
-                        '<div class="col-xs-3">' +
-                        '<div class="form-group bg-f2 padding-lr-8 no-margin">' +
-                        '<label> 收费类别 </label>' +
-                        '<div><label class="radio-inline"><input type="radio" name="z" class="minimal" /><span>住院</span></label><label class="radio-inline"><input type="radio" name="z" class="minimal"/><span>门诊</span></label></div>' +
-                        '</div></div></div>' +
-                        '<div class="row overflow-h"><div class="col-xs-1 col-xs-offset-11" style="margin-bottom: 8px;"><a href="javascript:;" class="btn btn-default btn-sm  pull-right" onclick="delItem(this)">删除</a></div></div>' +
-                        '</div>';
-                $(".my-mx").append(mx_node);
-            } else {
-                counter1 = 5;
-            }
+            var step3_node ='<div class="add_content pubDel">' +
+                    '<div class="row">' +
+                    '<div class="col-xs-3"><div class="form-group"><label class="sr-only"> 收费项目名称 </label><input type="text" class="form-control" placeholder="收费项目名称"/></div></div>'+
+                    '<div class="col-xs-3"><div class="form-group"><label class="sr-only"> 收费项目编码 </label><input type="text" class="form-control" placeholder="收费项目编码"/></div></div>'+
+                    '<div class="col-xs-3"><div class="form-group"><label class="sr-only"> 费用/次(元) </label><input type="text" class="form-control" placeholder="费用/次(元)"/></div></div>' +
+                    '<div class="col-xs-3">' +
+                    '<div class="form-group bg-f2 padding-lr-8 no-margin">' +
+                    '<label> 收费类别 </label>' +
+                    '<div><label class="radio-inline"><input type="radio" name="z" class="minimal" /><span>住院</span></label><label class="radio-inline"><input type="radio" name="z" class="minimal"/><span>门诊</span></label></div>' +
+                    '</div></div></div>' +
+                    '<div class="row overflow-h"><div class="col-xs-1 col-xs-offset-11" style="margin-bottom: 8px;"><a href="javascript:;" class="btn btn-default btn-sm  pull-right delete-btn" >删除</a></div></div>' +
+                    '</div>';
+            pubOp($('.my-mx'), step3_node, 5);
 
         });
 
         $('.add_proj').on('click', function(){
-            ++counter2;
-            if(counter2 <= 5) {
-                var proj_node = '<div class="row mmp">'+
-                        '<div class="col-xs-6">'+
-                        '<div class="form-group">'+
-                        '<label class="sr-only"> 开展常规项目名称<i class="text-danger">*</i> </label>'+
-                        '<input type="text" class="form-control" placeholder="开展常规项目名称"/>'+
-                        '</div></div><div class="col-xs-1"><a href="javascript:;" class="btn btn-default" onclick="delProj(this)">删除</a></div></div>';
-                $('.my-proj').append(proj_node);
-            }else{
-                counter2 = 5;
-            }
+            var step4_node ='<div class="row pubDel">'+
+                    '<div class="col-xs-6">'+
+                    '<div class="form-group">'+
+                    '<label class="sr-only"> 开展常规项目名称<i class="text-danger">*</i> </label>'+
+                    '<input type="text" class="form-control" placeholder="开展常规项目名称"/>'+
+                    '</div></div><div class="col-xs-1"><a href="javascript:;" class="btn btn-default delete-btn" >删除</a></div></div>';
+            pubOp($('.my-proj'), step4_node, 5);
+
         });
 
         $('.add_proj_ks').on('click', function(){
-            ++counter3;
-            if(counter3 <= 5) {
-                var proj_node = '<div class="ks-wrapper margin-bottom-5"><div class="row">'+
-                        '<div class="col-xs-6"><div class="form-group margin-bottom-5"><label class="sr-only">预提高科室诊疗水平项目</label><input type="text" class="form-control"></div></div>'+
-                        '<div class="col-xs-6"><div class="form-group margin-bottom-5"><label class="sr-only">预期达到的水平</label><input type="text" class="form-control"></div></div>' +
-                        '</div><div class="row"><div class="col-xs-1 col-xs-offset-11"><a href="javascript:;" class="btn btn-default pull-right" onclick="delKs(this)">删除</a></div></div></div>';
-                $('.my-proj-ks').append(proj_node);
-            }else{
-                counter3 = 5;
-            }
+            var step5_node ='<div class="ks-wrapper margin-bottom-5 pubDel"><div class="row">'+
+                    '<div class="col-xs-6"><div class="form-group margin-bottom-5"><label class="sr-only">预提高科室诊疗水平项目</label><input type="text" class="form-control"></div></div>'+
+                    '<div class="col-xs-6"><div class="form-group margin-bottom-5"><label class="sr-only">预期达到的水平</label><input type="text" class="form-control"></div></div>' +
+                    '</div><div class="row"><div class="col-xs-1 col-xs-offset-11"><a href="javascript:;" class="btn btn-default pull-right delete-btn">删除</a></div></div></div>';
+            pubOp($('.my-proj-ks'), step5_node, 5);
+
         });
     });
 
